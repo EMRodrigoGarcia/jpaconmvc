@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listing last customers as <span th:text="${header_lastname}"> Default lastname</span></h1>
+
+    <table>
+        <tr th:each="customer : ${list_lastname}">
+            <td th:text="${customer.id}">ID</td>
+            <td th:text="${customer.firstName}">Firstname</td>
+            <td th:text="${customer.fechaNacimiento}">FechaNac</td>
+        </tr>
+    </table>
+</body>
+</html>
